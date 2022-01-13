@@ -1,14 +1,11 @@
 name: ci
 
 on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+  release:
+    branches: [ master ]
+    types: [ published ]
+    tags:
+      - v*
 
 jobs:
   ci:
